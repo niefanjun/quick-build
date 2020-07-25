@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
  * @type {import('webpack').Configuration}
  */
 const config = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         "framework": ['react','react-dom']
     },

@@ -15,7 +15,6 @@ const config = {
 	output: {
 		filename: 'js/[name].[chunkhash:8].bundle.js',
 	},
-	devtool: 'cheap-module-source-map',
 	optimization: {
 		minimizer: [
 			new TerserPlugin(),
@@ -26,11 +25,6 @@ const config = {
 			maxSize: 0,
 			minChunks: 1,
 			cacheGroups: {
-				framework: {
-					test: 'framework',
-					name: 'framework',
-					enforce: true,
-				},
 				vendors: {
 					priority: -10,
 					test: /node_modules/,
