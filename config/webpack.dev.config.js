@@ -14,6 +14,7 @@ const config = {
 	output: {
 		filename: 'js/[name].[hash:8].bundle.js',
 	},
+	devtool: 'cheap-module-eval-source-map',
 	plugins: [
 		...HtmlWebpackPluginList,
 		new webpack.HotModuleReplacementPlugin(),

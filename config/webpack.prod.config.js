@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.config.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -15,6 +15,7 @@ const config = {
 	output: {
 		filename: 'js/[name].[chunkhash:8].bundle.js',
 	},
+	devtool: 'cheap-module-source-map',
 	optimization: {
 		minimizer: [
 			new TerserPlugin(),
@@ -40,8 +41,8 @@ const config = {
 		}
 	},
 	plugins: [
-		...HtmlWebpackPluginList,
 		new CleanWebpackPlugin(),
+		...HtmlWebpackPluginList,
 	]
 }
 

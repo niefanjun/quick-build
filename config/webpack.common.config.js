@@ -1,6 +1,8 @@
 
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 /**
  * npm install @types/webpack
  * @type {import('webpack').Configuration}
@@ -48,6 +50,15 @@ const config = {
 		}
 	},
 	plugins: [
+		new webpack.DllReferencePlugin({
+			manifest: path.resolve(__dirname, '../dll', 'manifest.json')
+		}),
+		new CopyWebpackPlugin({
+			patterns: [{
+				from: path.resolve(__dirname, '../dll'),
+				to: path.resolve(__dirname, '../dist/dll')
+			}]
+		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[hash].css',
 			chunkFilename: 'css/[id].[hash].css',

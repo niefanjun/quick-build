@@ -5,7 +5,7 @@ class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			word: 'hello world'
+			word: 'hello world1'
 		}
 	}
 	render() {
