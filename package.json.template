@@ -9,7 +9,7 @@
     "dll": "webpack --config ./config/webpack.dll.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  {% if projectGit %}
+  {{#if projectGit}}
   "repository": {
     "type": "git",
     "url": "git+{{projectGit}}.git"
@@ -18,7 +18,7 @@
     "url": "{{projectGit}}/issues"
   },
   "homepage": "{{projectGit}}#readme",
-  {% endif %}
+  {{/if}}
   "author": "",
   "license": "ISC",
   "devDependencies": {
