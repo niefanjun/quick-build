@@ -1,5 +1,4 @@
 module.exports = {
-
   types: [
     {value: 'feat',     name: 'feat:   一个新的特性'},
     {value: 'fix',      name: 'fix:    修复一个Bug'},
