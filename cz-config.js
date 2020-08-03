@@ -10,6 +10,7 @@ module.exports = {
     {value: 'chore',    name: 'chore:开发工具变动(构建、脚手架工具等)'},
     {value: 'WIP',   name: 'WIP:代码回退'}
   ],
+
   scopes: [
     {name: 'normal'},
     {name: 'hotfix'}
