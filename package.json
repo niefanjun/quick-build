@@ -24,6 +24,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
     "@types/webpack": "^4.41.21",
     "autoprefixer": "^9.8.5",
     "babel-loader": "^8.1.0",
@@ -38,6 +39,7 @@
     "html-webpack-inline-source-plugin": "1.0.0-beta.2",
     "html-webpack-plugin": "^4.3.0",
     "http-errors": "^1.8.0",
+    "husky": "^4.2.5",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "mini-css-extract-plugin": "^0.9.0",
@@ -62,5 +64,10 @@
     "cz-customizable": {
       "config": "./cz-config.js"
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }  
   }
 }

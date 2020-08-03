@@ -1,14 +1,14 @@
 module.exports = {
   types: [
-    {value: 'feat',     name: 'feat:   一个新的特性'},
-    {value: 'fix',      name: 'fix:    修复一个Bug'},
-    {value: 'docs',     name: 'docs:    变更的只有文档'},
-    {value: 'style',    name: 'style:    空格, 分号等格式修复'},
-    {value: 'refactor', name: 'refactor:    代码重构，注意和特性、修复区分开'},
-    {value: 'perf',     name: 'perf:    提升性能'},
-    {value: 'test',     name: 'test:    添加一个测试'},
-    {value: 'chore',    name: 'chore:    开发工具变动(构建、脚手架工具等)'},
-    {value: 'WIP',   name: 'WIP:    代码回退'}
+    {value: 'feat',     name: 'feat:一个新的特性'},
+    {value: 'fix',      name: 'fix:修复一个Bug'},
+    {value: 'docs',     name: 'docs:变更的只有文档'},
+    {value: 'style',    name: 'style:空格, 分号等格式修复'},
+    {value: 'refactor', name: 'refactor:代码重构，注意和特性、修复区分开'},
+    {value: 'perf',     name: 'perf:提升性能'},
+    {value: 'test',     name: 'test:添加一个测试'},
+    {value: 'chore',    name: 'chore:开发工具变动(构建、脚手架工具等)'},
+    {value: 'WIP',   name: 'WIP:代码回退'}
   ],
 
   scopes: [
@@ -39,7 +39,6 @@ module.exports = {
     footer: '关联关闭的issue，例如：#31, #34(可选):\n',
     confirmCommit: '确定提交说明?'
   },
-
   allowCustomScopes: true,
   allowBreakingChanges: ['特性', '修复'],
 
