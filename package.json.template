@@ -9,16 +9,18 @@
     "dll": "webpack --config ./config/webpack.dll.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  {% if projectGit %}
   "repository": {
     "type": "git",
     "url": "git+{{projectGit}}.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "{{projectGit}}/issues"
   },
   "homepage": "{{projectGit}}#readme",
+  {% endif %}
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
